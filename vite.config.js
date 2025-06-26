@@ -1,12 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss()
-  ],
-  base:"/Ems"
+  plugins: [react()],
+  preview: {
+    host: true,
+    port: 4173, // or the port you're using
+    allowedHosts: ['ems-qxl0.onrender.com'], // ✅ Add your Render domain here
+  },
 })
